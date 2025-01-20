@@ -1,0 +1,72 @@
+.elegant-loader {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .ring {
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid transparent;
+  }
+  
+  .outer {
+    width: 100%;
+    height: 100%;
+    border-top-color: #3b82f6;
+    border-left-color: #3b82f6;
+    animation: spinOuter 1.5s linear infinite;
+  }
+  
+  .inner {
+    width: 70%;
+    height: 70%;
+    border-bottom-color: #3b82f6;
+    border-right-color: #3b82f6;
+    animation: spinInner 1.5s linear infinite reverse;
+  }
+  
+  .progress-line {
+    position: absolute;
+    width: 3px;
+    height: 50%;
+    background: linear-gradient(to bottom, #3b82f6, transparent);
+    transform-origin: 50% 100%;
+    animation: progressSweep 3s ease-in-out infinite;
+  }
+  
+  @keyframes spinOuter {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes spinInner {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes progressSweep {
+    0% {
+      transform: rotate(0deg);
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.3;
+    }
+    100% {
+      transform: rotate(360deg);
+      opacity: 1;
+    }
+  }
+  
